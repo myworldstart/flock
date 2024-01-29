@@ -59,8 +59,20 @@ def normalizeStaining(I, Io, beta, alpha, HERef, maxCRef):
 
     np.divide(C, maxC, C)
     C = C * maxCRef
-    Inorm = Io * np.exp(-np.dot(HERef, C))
 
+    Inorm = Io * np.exp(-np.dot(HERef, C))
+    Inorm = np.reshape(Inorm.T, (h, w, 3))
+    Inorm = Inorm.astype(np.int)
+
+    H = Io*np.log(np.dot(-HERef[:, 0]), C[0, :])
+    H = np.reshape(H.T, (h, w, 3))
+    H = H.astype(np.int)
+
+    E = Io*np.log(np.dot(-HERef[:, 1]), C[1, :])
+    E = np.reshape(E.T, (h, w, 3))
+    E = E.astype(np.int)
+
+    return Inorm, H, E
 
 
 
