@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="02f3a980-8d84-4106-8f86-d475c5ab73e1" name="flock">
+        <fileTransfer rootFolder="/home/xjb" accessType="SFTP" host="10.214.211.151" port="18022" sshConfigId="16c06293-89da-41c1-9453-889261c400c7" sshConfig="xjb@10.214.211.151:18022 agent" authAgent="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
